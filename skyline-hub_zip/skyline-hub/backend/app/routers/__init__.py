@@ -1,0 +1,17 @@
+from app.routers.auth import router as auth_router
+from app.routers.members import router as members_router
+from app.routers.memberships import router as memberships_router
+from app.routers.events import router as events_router
+from app.routers.tickets import router as tickets_router
+from app.routers.checkin import router as checkin_router
+from app.routers.announcements import router as announcements_router
+from app.routers.newsletter import router as newsletter_router
+from app.routers.products import router as products_router
+from app.routers.orders import router as orders_router
+from app.routers.fundraisers import router as fundraisers_router
+from app.routers.tasks import router as tasks_router
+from app.routers.expenses import router as expenses_router
+from app.routers.finance import router as finance_router
+from app.routers.dashboard import router as dashboard_router
+from app.routers.uploads import router as uploads_router
+from app.routers.emails import router as emails_router

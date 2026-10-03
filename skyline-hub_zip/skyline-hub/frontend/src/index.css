@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 255 255 255;
+  --foreground: 17 24 39;
+  --card: 255 255 255;
+  --muted: 244 244 247;
+  --muted-fg: 106 110 122;
+  --border: 228 228 234;
+  --primary: 113 75 103;
+  --primary-hover: 92 60 84;
+  --accent: 245 185 58;
+}
+.dark {
+  --background: 15 15 18;
+  --foreground: 244 244 245;
+  --card: 24 24 28;
+  --muted: 39 39 44;
+  --muted-fg: 158 158 170;
+  --border: 46 46 52;
+  --primary: 160 114 148;
+  --primary-hover: 176 132 164;
+  --accent: 245 185 58;
+}
+
+@layer base {
+  * { @apply border-border; }
+  html { -webkit-text-size-adjust: 100%; }
+  body { @apply bg-background text-foreground font-sans antialiased; }
+  h1, h2, h3, h4 { @apply font-semibold tracking-tight; }
+  :focus-visible { @apply outline-none ring-2 ring-primary ring-offset-2 ring-offset-background; }
+}
+
+@layer utilities {
+  .card-shadow { box-shadow: 0 1px 2px rgb(16 16 24 / 0.04), 0 8px 24px -12px rgb(16 16 24 / 0.12); }
+  .hero-grad { background-image: radial-gradient(1100px 420px at 12% -8%, rgb(113 75 103 / 0.95), transparent), linear-gradient(140deg, #714B67 0%, #4b2f45 55%, #2c1a29 100%); }
+  .brand-grad { background-image: linear-gradient(135deg, #714B67 0%, #8d5f80 45%, #F5B93A 145%); }
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+}
+
+@media print {
+  .no-print, nav, aside, header.app-topbar { display: none !important; }
+  body { background: #fff !important; color: #000 !important; }
+  .print-block { display: block !important; }
+  @page { margin: 14mm; }
+}
